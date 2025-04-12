@@ -24,16 +24,38 @@
             background-color: #2c3e50;
             color: #ecf0f1;
             padding: 1rem;
-            text-align: center;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: #3498db;
         }
 
         nav ul {
             list-style-type: none;
+            display: flex;
         }
 
         nav ul li {
-            display: inline;
             margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
         }
 
         nav ul li a {
@@ -44,6 +66,53 @@
 
         nav ul li a:hover {
             color: #3498db;
+        }
+
+        .social-links {
+            display: flex;
+        }
+
+        .social-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #3498db;
+        }
+
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                position: fixed;
+            }
+
+            nav {
+                margin-top: 1rem;
+                width: 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .social-links {
+                margin-top: 1rem;
+            }
+
+            .social-links a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
         }
 
         /* Main content styles */
@@ -144,14 +213,22 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="projectshowcase.html">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="projectshowcase.html" class="logo">Austin Baird</a>
+            <nav>
+                <ul>
+                    <!--<li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>-->
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="#" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
+                <a href="#" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
+                <nav><a href="projectshowcase.html"> Contact Me </a></nav>
+            </div>
+        </div>
     </header>
 
     <main>
