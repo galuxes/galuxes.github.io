@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Explorer - Game Project</title>
+    <title>Solanis - Flight System Implementation</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Reset and base styles */
         * {
@@ -214,54 +215,114 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="projectshowcase.html" class="logo">Austin Baird</a>
+            <a href="index.html" class="logo">Austin Baird</a>
             <nav>
                 <ul>
-                    <!--<li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>-->
                 </ul>
             </nav>
             <div class="social-links">
                 <a href="#" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
                 <a href="#" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
-                <nav><a href="projectshowcase.html"> Contact Me </a></nav>
+                <nav><a href="contact.html">Contact Me</a></nav>
             </div>
         </div>
     </header>
 
     <main>
-        <h1 class="project-title">Solanis</h1>
-        <section class="project-description">
-            <p>Solanis is a 3D flight based exploration game. As the lead programmer, I developed the core game mechanics, implemented flight physics, and worked with other programmers delegating tasks based off of proficiencies.</p>
+        <h1 class="project-title">Solanis Flight System</h1>
+        
+        <section class="project-overview">
+            <h2>Project Overview</h2>
+            <p>Solanis is a 3D flight-based exploration game where players navigate through stunning alien landscapes. As the lead programmer, I developed the core flight mechanics, implemented physics systems, and created design-focused tools for an immersive experience.</p>
         </section>
 
-        <div class="project-images">
-            <img src="/Images\elementor-placeholder-image.webp?height=200&width=300" alt="Solanis Screenshot 1" class="project-image">
-            <img src="/Images\elementor-placeholder-image.webp?height=200&width=300" alt="Solanis Screenshot 2" class="project-image">
-            <img src="/Images\elementor-placeholder-image.webp?height=200&width=300" alt="Solanis Screenshot 3" class="project-image">
-        </div>
+        <section class="implementation-details">
+            <h2>Flight System Implementation</h2>
+            
+            <div class="implementation-step">
+                <div class="step-content">
+                    <h3>1. Core Physics Framework</h3>
+                    <p>Implemented a custom physics system using Unreal Engine's built-in physics engine as a foundation. Created a modular architecture that allows for easy adjustment of flight characteristics.</p>
+                    <ul>
+                        <li>Custom force calculations for lift, drag, and thrust</li>
+                        <li>Variable physics timestep for smooth simulation</li>
+                        <li>Collision detection and response system</li>
+                    </ul>
+                </div>
+                <div class="step-media">
+                    <img src="/Images/physics_demo.gif" alt="Physics Framework Demo" class="step-gif">
+                </div>
+            </div>
 
-        <div class="project-details">
-            <div>
-                <h3>Technical Features</h3>
-                <ul>
-                    <li>Flight based physics</li>
-                    <li>Dynamic Camera</li>
-                    <li>Responsive controls</li>
-                    <li>Design focused tools</li>
-                </ul>
+            <div class="implementation-step">
+                <div class="step-content">
+                    <h3>2. Control System</h3>
+                    <p>Developed an intuitive control scheme that balances responsiveness with realistic flight behavior. Implemented both gamepad and keyboard/mouse support with customizable sensitivity.</p>
+                    <ul>
+                        <li>Analog input processing for smooth control</li>
+                        <li>Input mapping system for different control schemes</li>
+                        <li>Control surface simulation for realistic movement</li>
+                    </ul>
+                </div>
+                <div class="step-media">
+                    <img src="/Images/controls_demo.gif" alt="Control System Demo" class="step-gif">
+                </div>
             </div>
-            <div>
-                <h3>Tools & Technologies</h3>
-                <ul>
-                    <li>Unreal 5.4.4</li>
-                    <li>Unreal Blueprints</li>
-                    <li>Built for controllers</li>
-                </ul>
+
+            <div class="implementation-step">
+                <div class="step-content">
+                    <h3>3. Camera System</h3>
+                    <p>Created a dynamic camera system that follows the player's craft while maintaining visibility and providing cinematic views. Implemented multiple camera modes for different gameplay situations.</p>
+                    <ul>
+                        <li>Third-person chase camera with predictive movement</li>
+                        <li>First-person cockpit view with motion effects</li>
+                        <li>Cinematic camera modes for special moments</li>
+                    </ul>
+                </div>
+                <div class="step-media">
+                    <img src="/Images/camera_demo.gif" alt="Camera System Demo" class="step-gif">
+                </div>
             </div>
-        </div>
+
+            <div class="implementation-step">
+                <div class="step-content">
+                    <h3>4. Environmental Interaction</h3>
+                    <p>Developed systems for the flight mechanics to interact with the environment, including wind currents, atmospheric effects, and terrain-based challenges.</p>
+                    <ul>
+                        <li>Wind system affecting flight dynamics</li>
+                        <li>Atmospheric density variations</li>
+                        <li>Terrain-based turbulence and updrafts</li>
+                    </ul>
+                </div>
+                <div class="step-media">
+                    <img src="/Images/environment_demo.gif" alt="Environmental Effects Demo" class="step-gif">
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-details">
+            <h2>Technical Features & Tools</h2>
+            <div class="details-grid">
+                <div class="details-card">
+                    <h3>Technical Features</h3>
+                    <ul>
+                        <li>Custom flight physics system</li>
+                        <li>Dynamic camera behavior</li>
+                        <li>Responsive control scheme</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+                <div class="details-card">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>Unreal Engine 5.4.4</li>
+                        <li>Unreal Blueprints</li>
+                        <li>Atlassian Suite</li>
+                        <li>SVN</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
