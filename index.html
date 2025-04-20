@@ -104,6 +104,19 @@
             margin: 0 0.25rem;
         }
 
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+            margin-right: 0.25rem;
+        }
+
+        .social-links a:hover .social-icon {
+            filter: brightness(0) invert(0.7);
+        }
+
         .social-links a:hover {
             color: var(--secondary-color);
             background-color: rgba(255, 255, 255, 0.1);
@@ -406,7 +419,7 @@
             </nav>
             <div class="social-links">
                 <a href="#" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
-                <a href="#" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
+                <a href="#" title="GitHub"><img src="Images/github-mark.webp" alt="GitHub" class="social-icon"><span class="sr-only">GitHub</span></a>
                 <nav><a href="contact.html">Contact Me</a></nav>
             </div>
         </div>
@@ -435,7 +448,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="/Images\elementor-placeholder-image.webp?height=200&width=200" alt="Austin Baird" class="about-image">
+                <img src="Images/Austin_ Baird_1.webp" alt="Austin Baird" class="about-image">
             </div>
         </section>
 
