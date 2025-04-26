@@ -17,7 +17,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #fbf5e5;
         }
 
         /* Header styles */
@@ -46,29 +46,6 @@
             color: #3498db;
         }
 
-        nav ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 20px;
-        }
-
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #3498db;
-        }
-
         .social-links {
             display: flex;
         }
@@ -84,38 +61,6 @@
             color: #3498db;
         }
 
-
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-                position: fixed;
-            }
-
-            nav {
-                margin-top: 1rem;
-                width: 100%;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin-right: 0;
-                margin-bottom: 0.5rem;
-            }
-
-            .social-links {
-                margin-top: 1rem;
-            }
-
-            .social-links a {
-                margin-left: 0;
-                margin-right: 15px;
-            }
-        }
-
         /* Main content styles */
         main {
             max-width: 800px;
@@ -129,54 +74,45 @@
             margin-bottom: 1rem;
         }
 
-        .project-description {
+        .project-overview,
+        .implementation-details,
+        .technical-details {
             background-color: #fff;
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
         }
 
-        .project-images {
+        .implementation-step {
             display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .project-image {
-            width: 32%;
+        .step-content {
+            flex: 1;
+        }
+
+        .step-media {
+            flex: 1;
+        }
+
+        .step-gif {
+            width: 100%;
             border-radius: 5px;
-            transition: transform 0.3s ease;
         }
 
-        .project-image:hover {
-            transform: scale(1.05);
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        .project-details {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-
-        .project-details div {
-            background-color: #fff;
-            padding: 1rem;
+        .details-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 48%;
-        }
-
-        .project-details h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-details ul {
-            list-style-type: none;
-        }
-
-        .project-details li {
-            margin-bottom: 0.5rem;
         }
 
         /* Footer styles */
@@ -192,22 +128,12 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .project-images {
+            .implementation-step {
                 flex-direction: column;
             }
 
-            .project-image {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .project-details {
-                flex-direction: column;
-            }
-
-            .project-details div {
-                width: 100%;
-                margin-bottom: 1rem;
+            .details-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -221,8 +147,8 @@
                 </ul>
             </nav>
             <div class="social-links">
-                <a href="#" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
-                <a href="#" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
+                <a href="https://www.linkedin.com/in/austin-james-baird/" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
+                <a href="https://github.com/galuxes" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
                 <nav><a href="contact.html">Contact Me</a></nav>
             </div>
         </div>
@@ -244,9 +170,9 @@
                     <h3>1. Core Physics Framework</h3>
                     <p>Implemented a custom physics system using Unreal Engine's built-in physics engine as a foundation. Created a modular architecture that allows for easy adjustment of flight characteristics.</p>
                     <ul>
-                        <li>Custom force calculations for lift, drag, and thrust</li>
-                        <li>Variable physics timestep for smooth simulation</li>
-                        <li>Collision detection and response system</li>
+                        <li>Custom force calculations.</li>
+                        <li>Variable per force drag for smooth simulation</li>
+                        <li>Collision prediction and response system</li>
                     </ul>
                 </div>
                 <div class="step-media">
@@ -257,11 +183,11 @@
             <div class="implementation-step">
                 <div class="step-content">
                     <h3>2. Control System</h3>
-                    <p>Developed an intuitive control scheme that balances responsiveness with realistic flight behavior. Implemented both gamepad and keyboard/mouse support with customizable sensitivity.</p>
+                    <p>Developed an intuitive control scheme that balances responsiveness with smooth flight behavior. Implemented both gamepad and keyboard/mouse support with customizable inversion.</p>
                     <ul>
-                        <li>Analog input processing for smooth control</li>
-                        <li>Input mapping system for different control schemes</li>
-                        <li>Control surface simulation for realistic movement</li>
+                        <li>Abstracted input for variable smoothing.</li>
+                        <li>Multi layer interpolation for smooth control and force application.</li>
+                        <li>Custom curves for advanced smoothing and response.</li>
                     </ul>
                 </div>
                 <div class="step-media">
@@ -272,11 +198,11 @@
             <div class="implementation-step">
                 <div class="step-content">
                     <h3>3. Camera System</h3>
-                    <p>Created a dynamic camera system that follows the player's craft while maintaining visibility and providing cinematic views. Implemented multiple camera modes for different gameplay situations.</p>
+                    <p>Created a dynamic camera system that follows the player while maintaining visibility and providing cinematic views.</p>
                     <ul>
-                        <li>Third-person chase camera with predictive movement</li>
-                        <li>First-person cockpit view with motion effects</li>
-                        <li>Cinematic camera modes for special moments</li>
+                        <li>Targeted to show on screen movement of character.</li>
+                        <li>Dynamically adapts to player speed and movement accounting for abrupt changes in speed with additional smoothing.</li>
+                        <li>Manual camera control for cinematic shots.</li>
                     </ul>
                 </div>
                 <div class="step-media">
@@ -287,11 +213,11 @@
             <div class="implementation-step">
                 <div class="step-content">
                     <h3>4. Environmental Interaction</h3>
-                    <p>Developed systems for the flight mechanics to interact with the environment, including wind currents, atmospheric effects, and terrain-based challenges.</p>
+                    <p>Developed systems for the flight mechanics to interact with the environment, including wind; currents, tunnels, and slipstreams.</p>
                     <ul>
-                        <li>Wind system affecting flight dynamics</li>
-                        <li>Atmospheric density variations</li>
-                        <li>Terrain-based turbulence and updrafts</li>
+                        <li>Level elements such as slip stream and updrafts can be used to create unique flight paths.</li>
+                        <li>Wind Volumes providing turbulence, barriers and directional forces allow different feeling airspaces and areas.</li>
+                        <li>Different objectives such as Enemy chase AI and Ballistas that fire at the player are used to make the player interact with the flight system in different ways.</li>
                     </ul>
                 </div>
                 <div class="step-media">

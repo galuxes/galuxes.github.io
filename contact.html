@@ -18,7 +18,7 @@
             --accent-color: #e74c3c;
             --text-color: #2c3e50;
             --text-light: #7f8c8d;
-            --background-color: #f8f9fa;
+            --background-color: #fbf5e5;
             --card-background: #ffffff;
             --shadow-color: rgba(0, 0, 0, 0.1);
         }
@@ -102,6 +102,19 @@
             width: 36px;
             height: 36px;
             margin: 0 0.25rem;
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+            margin-right: 0.25rem;
+        }
+
+        .social-links a:hover .social-icon {
+            filter: brightness(0) invert(0.7);
         }
 
         .social-links a:hover {
@@ -302,9 +315,9 @@
                 </ul>
             </nav>
             <div class="social-links">
-                <a href="#" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
-                <a href="#" title="GitHub"><span class="icon">&#128187;</span><span class="sr-only">GitHub</span></a>
-                <nav><a href="index.html"> Back to Home </a></nav>
+                <a href="https://www.linkedin.com/in/austin-james-baird/" title="LinkedIn"><span class="icon">&#128279;</span><span class="sr-only">LinkedIn</span></a>
+                <a href="https://github.com/galuxes" title="GitHub"><img src="Images/github-mark.webp" alt="GitHub" class="social-icon"><span class="sr-only">GitHub</span></a>
+                <nav><a href="index.html"> Back </a></nav>
             </div>
         </div>
     </header>
@@ -318,28 +331,28 @@
                     <div class="contact-icon">📧</div>
                     <div class="contact-details">
                         <div class="contact-label">Email</div>
-                        <div class="contact-value">your.email@example.com</div>
+                        <div class="contact-value">austinbairds1223@gmail.com</div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
                     <div class="contact-details">
                         <div class="contact-label">Phone</div>
-                        <div class="contact-value">(123) 456-7890</div>
+                        <div class="contact-value">+1(862) 686 1564</div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">🔗</div>
                     <div class="contact-details">
                         <div class="contact-label">LinkedIn</div>
-                        <div class="contact-value"><a href="#" target="_blank">linkedin.com/in/yourprofile</a></div>
+                        <div class="contact-value"><a href="https://www.linkedin.com/in/austin-james-baird/" target="_blank">linkedin.com/in/austin-james-baird/</a></div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💻</div>
                     <div class="contact-details">
                         <div class="contact-label">GitHub</div>
-                        <div class="contact-value"><a href="#" target="_blank">github.com/yourusername</a></div>
+                        <div class="contact-value"><a href="https://github.com/galuxes" target="_blank">github.com/galuxes</a></div>
                     </div>
                 </div>
             </div>
