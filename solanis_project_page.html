@@ -63,9 +63,9 @@
 
         /* Main content styles */
         main {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
 
         .project-title {
@@ -82,25 +82,35 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
+            width: 100%;
         }
 
         .implementation-step {
             display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         .step-content {
             flex: 1;
+            min-width: 300px;
+            max-width: 400px;
         }
 
         .step-media {
-            flex: 1;
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .step-gif {
             width: 100%;
+            min-width: 500px;
+            max-width: 700px;
+            height: auto;
             border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .details-grid {
@@ -159,7 +169,7 @@
         
         <section class="project-overview">
             <h2>Project Overview</h2>
-            <p>Solanis is a 3D flight-based exploration game where players navigate through stunning alien landscapes. As the lead programmer, I developed the core flight mechanics, implemented physics systems, and created design-focused tools for an immersive experience.</p>
+            <p>Solanis is a 3D, flight-based exploration game set in a sun-scorched world. As the lead programmer, I was responsible for developing core gameplay systems and key features, including flight physics, dynamic camera systems, responsive controls, and design-focused tools to enhance the overall player experience.</p>
         </section>
 
         <section class="implementation-details">
@@ -176,7 +186,7 @@
                     </ul>
                 </div>
                 <div class="step-media">
-                    <img src="/Images/physics_demo.gif" alt="Physics Framework Demo" class="step-gif">
+                    <img src="./Images/avoidance.gif" alt="Physics Framework Demo" class="step-gif">
                 </div>
             </div>
 
@@ -191,7 +201,7 @@
                     </ul>
                 </div>
                 <div class="step-media">
-                    <img src="/Images/controls_demo.gif" alt="Control System Demo" class="step-gif">
+                    <img src="Images/rockShrineTunnel_1.gif" alt="Control System Demo" class="step-gif">
                 </div>
             </div>
 
@@ -206,7 +216,7 @@
                     </ul>
                 </div>
                 <div class="step-media">
-                    <img src="/Images/camera_demo.gif" alt="Camera System Demo" class="step-gif">
+                    <img src="Images/stardash.gif" alt="Camera System Demo" class="step-gif">
                 </div>
             </div>
 
@@ -221,7 +231,7 @@
                     </ul>
                 </div>
                 <div class="step-media">
-                    <img src="/Images/environment_demo.gif" alt="Environmental Effects Demo" class="step-gif">
+                    <img src="Images/windTunnel_1.gif" alt="Environmental Effects Demo" class="step-gif">
                 </div>
             </div>
         </section>
